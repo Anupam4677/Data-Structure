@@ -22,6 +22,11 @@ def insertion_sort(alist):
     return alist
 res = insertion_sort(blist)
 print(res)
+
+# Two loops are required :
+# First to consider all the lement freom 2nd eleemnt(index=1) 26 to last element 93 - for range(1-len(alist)
+# 2nd loop - current element should consider all the previous element. 'while loop'- position > 0 (first position)
+
 # for loop 1 to 8 
 # for loop index_insertion = 1 ---current value = 26, position = 1
 # while loop - as position is greater than 0 and 54 > 26 --  exchange and position = 0 - Get out of loop 
