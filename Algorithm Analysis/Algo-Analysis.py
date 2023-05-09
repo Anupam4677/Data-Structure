@@ -46,3 +46,13 @@ print(ans2)
 # n^3 - Cubic 
 # 2^n - Exponential 
 
+# Algo efficiency in terms of ececution time independent of progamming language or computer
+# It is important to quantify the no of steps or operations required 
+# If each of these steps considered to be basic unit then execution time can be expressed as no of steps
+# Decidng the basic unit of computaion can be tricky 
+# In above function lets count the assignment steps
+# Totalsum = 0 - 1 assignment 
+# totlasum += ele - ele(len(n)) assignments 
+# T(n) = 1+n steps - So time required to solve the larger case will be bigger than smaller 
+
+
