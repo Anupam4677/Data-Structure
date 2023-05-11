@@ -1,4 +1,5 @@
 # Generators
+# generators are produced by functions that use yield expression 
 # Having a consistent way to iterate over sequence,i.e. object in a listis imp pythod feature 
 # This is accomplished by means of the iterator protocol - a generic way to mae obj iteratble
 # ie. iterating over a dic yield the dict keyword
