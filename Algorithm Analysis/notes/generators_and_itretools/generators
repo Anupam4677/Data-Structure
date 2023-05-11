@@ -1,0 +1,50 @@
+# Generators
+# Having a consistent way to iterate over sequence,i.e. object in a listis imp pythod feature 
+# This is accomplished by means of the iterator protocol - a generic way to mae obj iteratble
+# ie. iterating over a dic yield the dict keyword
+some_dict = {'a':1,'b':2,'c':3}
+for key in some_dict:
+    print(key)
+# when you write for key in in some_dict, the python interpreter first attemps to create an iterator out of some dict 
+dict_iterator = iter(some_dict)
+dict_iterator
+
+# an iterator is any object that will yield objects to python interpretor when used in context like for loop 
+# most methods expecting a list or list like object will also accept any iterable obj
+# which included buid in methid like min,max,sum
+# alist=[12,2,3]
+# min(alist)
+# min(dict_iterator)
+# and type construct like list and tuple 
+list(dict_iterator)
+
+# A generator is a concise way to construct a new iterable obj
+# whereas normal functions execute and return a single result at a time,
+# generator returns a sequence of multiple results lazily 
+# pausing after each one untill the next one is requested 
+# to create a generator use yield keyword insteAd of RETURN 
+
+# Generator expression 
+# Generator expression 
+# Another even more concise way to make a generator is by using a generator expression.
+# this is a generator analoge to list , dict and set comprehension 
+# ()
+# gen = (x**2 for x in range(10))
+# gen
+# def make_gen():
+#     for x in range(100):
+#         yield x**2
+# gen = make_gen()
+# gen
+# # generator expression can be used insted of list comprehensions as function argument 
+# sum(x**2 for x in range(100))
+# dict((i,i**2) for i in range(5))
+
+# Itertools
+# the standard library itertools module has a collection of generators for many common data algorithms
+# ie. groupby takes any sequence and a function,grouping cosicutive elements in a sequence by return value of the function 
+import itertools
+first_letter = lambda x: x[0]
+names = ['Adam','Alan','Wes','Will','Albert','Steven']
+for letter,names in itertools.groupby(names,first_letter):
+    print(letter,list(names))
